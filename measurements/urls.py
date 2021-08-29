@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
 
-    path('list/', views.get_measurements, name='measuremnetsList')
+    path('list/', views.get_measurements, name='measurementsList'),
+    path('<int:measurement_id>', views.get_measurement, name='measurementByPk')
 
 ]

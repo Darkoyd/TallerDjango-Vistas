@@ -11,8 +11,7 @@ def get_measurements(request):
 
 def get_measurement(request, measurement_id):
     measurement = get_measurement_by_pk(measurement_id)
-    measurement_s = serializers.serialize('json',measurement)
-    return HttpResponse(measurement_s, content_type = 'application/json')
+    return HttpResponse(measurement, content_type = 'application/json')
 
 def delete_measurement(request, measurement_id):
     delete_measurement_by_pk(measurement_id)

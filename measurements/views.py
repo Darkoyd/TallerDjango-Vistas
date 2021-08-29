@@ -8,5 +8,5 @@ def get_measurements(request):
     measurements_list = serializers.serialize('json', measurements)
     return HttpResponse(measurements_list, content_type = 'application/json')
 
-def get_measurement(request, id):
-    return HttpResponse(serializers.serialize('json', get_measurement_by_pk(id)))
+def get_measurement(request, measurement_id):
+    return HttpResponse(serializers.serialize('json', get_measurement_by_pk(measurement_id)), content_type = 'application/json')

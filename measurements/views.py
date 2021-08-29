@@ -19,4 +19,4 @@ def delete_measurement(request, measurement_id):
 
 def update_measurement(request, measurement_id, new_value):
     measurement = update_measurement_value(measurement_id, new_value)
-    return HttpResponse('Measurement ' + measurement + ' updated')
+    return HttpResponse('Measurement updated')

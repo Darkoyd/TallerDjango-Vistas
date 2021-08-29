@@ -15,7 +15,7 @@ def get_measurement(request, measurement_id):
 
 def delete_measurement(request, measurement_id):
     delete_measurement_by_pk(measurement_id)
-    return HttpResponse(measurement_id + ' deleted')
+    return HttpResponse(str(measurement_id) + ' deleted')
 
 def update_measurement(request, measurement_id, new_value):
     measurement = update_measurement_value(measurement_id, new_value)
